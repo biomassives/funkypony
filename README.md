@@ -8,19 +8,22 @@
 [![Tests](https://img.shields.io/badge/tests-287%20passing-brightgreen)](https://github.com/biomassives/foodbank)
 [![Live](https://img.shields.io/badge/live-ward.funkypony.space-FDD835)](https://ward.funkypony.space)
 
-This folder is the **public-facing project hub** for Funky Pony Space. It is designed to be served as a standalone static site — no build step, just open `index.html`. It can be extracted and hosted as its own git repository independently of the main application.
+This is the **public-facing project hub** for Funky Pony Space — a static site with no build step. Open `index.html` directly in any browser, or deploy it to GitHub Pages, Netlify, or Vercel in one step.
+
+The main application lives at [biomassives/foodbank](https://github.com/biomassives/foodbank).
 
 ---
 
-## Launch Buttons
-
-Deploy a full pantry in minutes using your preferred stack:
+## Deploy a Pantry
 
 [![Deploy on Vercel + Supabase](https://img.shields.io/badge/Vercel_+_Supabase-recommended-FDD835?style=for-the-badge&logo=vercel&logoColor=black)](deploy_cloud.html)
 > Guided wizard — Supabase, Mailgun, Twilio, and all environment variables covered step by step.
 
 [![Deploy on Netlify + Supabase](https://img.shields.io/badge/Netlify_+_Supabase-deploy-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](deploy_cloud.html)
 > Guided wizard — also covers Nile multi-tenant DB and Heroku Postgres as database alternatives.
+
+[![Deploy with Cloudflare Pages](https://img.shields.io/badge/Cloudflare_Pages-edge-F48120?style=for-the-badge&logo=cloudflare&logoColor=white)](deploy_cloud.html#cloudflare)
+> Edge-native hosting on Cloudflare's global network. Fast anywhere, generous free tier.
 
 [![Deploy with Appwrite](https://img.shields.io/badge/Appwrite-self--sovereign-F02E65?style=for-the-badge&logo=appwrite&logoColor=white)](deploy_appwrite.html)
 > Step-by-step Appwrite wizard — run every layer yourself, no third-party cloud required.
@@ -29,6 +32,19 @@ Deploy a full pantry in minutes using your preferred stack:
 ```bash
 git clone https://github.com/biomassives/foodbank && npm install && quasar dev
 ```
+
+---
+
+## Enable GitHub Pages on This Repo
+
+This site deploys automatically via GitHub Actions. To activate it:
+
+1. Go to your repo → **Settings → Pages**
+2. Under **Source**, select **GitHub Actions**
+3. Push any change to `main` / `master` — the workflow in `.github/workflows/deploy-pages.yml` runs automatically
+4. Your site will be live at `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
+
+No build command needed — this is a pure static site.
 
 ---
 
@@ -61,13 +77,15 @@ Funky Pony is building toward a **pluggable component ecosystem** on top of the 
 
 ---
 
-## Contents of This Folder
+## Contents
 
 | File | Description |
 |---|---|
 | [`index.html`](index.html) | Landing page — docs index, deploy paths, vision, contribute, donate |
+| [`deploy_cloud.html`](deploy_cloud.html) | Interactive cloud deploy wizard — Vercel, Netlify, Cloudflare Pages, Nile, Heroku |
 | [`deploy_appwrite.html`](deploy_appwrite.html) | Interactive step-by-step Appwrite deployment wizard |
-| [`README.md`](README.md) | This file |
+| [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) | GitHub Actions workflow — auto-deploys this folder to GitHub Pages |
+| [`.nojekyll`](.nojekyll) | Prevents GitHub Pages from running Jekyll on this site |
 
 ---
 
@@ -85,9 +103,9 @@ Funky Pony is building toward a **pluggable component ecosystem** on top of the 
 
 ---
 
-## Contribute
+## Contribute to the App
 
-```
+```bash
 git clone https://github.com/biomassives/foodbank
 npm install
 quasar dev          # local mode, no keys needed
@@ -109,29 +127,6 @@ quasar dev          # local mode, no keys needed
 Infrastructure (Supabase, email delivery, CDN, domain) runs $20–50/month for a full pantry deployment. Donations fund hosting and core development.
 
 [♥ Donate via the project page](index.html#donate)
-
----
-
-## Using `rootdist` as a Standalone Repo
-
-This folder is designed to work independently. To extract it:
-
-```bash
-# From the main foodbank repo:
-cp -r rootdist /path/to/your/new/repo
-
-cd /path/to/your/new/repo
-git init
-git add .
-git commit -m "Initial project hub"
-
-# Then push to GitHub/GitLab and enable GitHub Pages
-# or deploy to Netlify/Vercel pointing at the root — no build command needed.
-```
-
-The only external dependencies are:
-- Logo and favicon images referenced from `https://ward.funkypony.space` — swap these for your own deployment's URL if self-hosting.
-- All deploy buttons point to `https://github.com/biomassives/foodbank` — update if you fork the project.
 
 ---
 
