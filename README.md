@@ -16,12 +16,19 @@ This folder is the **public-facing project hub** for Funky Pony Space. It is des
 
 Deploy a full pantry in minutes using your preferred stack:
 
-| Platform | Deploy path |
-|---|---|
-| **Vercel + Supabase** (recommended) | [→ Guided cloud wizard](deploy_cloud.html) — Supabase, Mailgun, Twilio, env vars all covered |
-| **Netlify + Supabase** | [→ Guided cloud wizard](deploy_cloud.html) — also covers Nile and Heroku Postgres options |
-| **Appwrite** (self-sovereign) | [→ Step-by-step Appwrite wizard](deploy_appwrite.html) |
-| **Local only** (zero cloud) | `git clone https://github.com/biomassives/foodbank && npm install && quasar dev` |
+[![Deploy on Vercel + Supabase](https://img.shields.io/badge/Vercel_+_Supabase-recommended-FDD835?style=for-the-badge&logo=vercel&logoColor=black)](deploy_cloud.html)
+> Guided wizard — Supabase, Mailgun, Twilio, and all environment variables covered step by step.
+
+[![Deploy on Netlify + Supabase](https://img.shields.io/badge/Netlify_+_Supabase-deploy-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](deploy_cloud.html)
+> Guided wizard — also covers Nile multi-tenant DB and Heroku Postgres as database alternatives.
+
+[![Deploy with Appwrite](https://img.shields.io/badge/Appwrite-self--sovereign-F02E65?style=for-the-badge&logo=appwrite&logoColor=white)](deploy_appwrite.html)
+> Step-by-step Appwrite wizard — run every layer yourself, no third-party cloud required.
+
+**Local only (zero cloud):**
+```bash
+git clone https://github.com/biomassives/foodbank && npm install && quasar dev
+```
 
 ---
 
