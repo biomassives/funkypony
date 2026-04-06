@@ -5,7 +5,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Vue 3](https://img.shields.io/badge/Vue-3-42b883)](https://vuejs.org)
 [![Quasar](https://img.shields.io/badge/Quasar-2-1976D2)](https://quasar.dev)
-[![Tests](https://img.shields.io/badge/tests-287%20passing-brightgreen)](https://github.com/biomassives/foodbank)
+[![Tests](https://img.shields.io/badge/tests-331%20passing%20·%2020%20suites-brightgreen)](https://github.com/biomassives/foodbank)
 [![Live](https://img.shields.io/badge/live-ward.funkypony.space-FDD835)](https://ward.funkypony.space)
 
 This is the **public-facing project hub** for Funky Pony Space — a static site with no build step. Open `index.html` directly in any browser, or deploy it to GitHub Pages, Netlify, or Vercel in one step.
